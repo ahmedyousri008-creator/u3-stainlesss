@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3 Stainless | المورد المعتمد للاستانلس ستيل في مصر</title>
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- كود معالجة امتدادات الصور الذكي -->
+    <script>
+        function handleImgError(img, baseName) {
+            var candidates = [
+                baseName + '.png',
+                baseName + '.jpg',
+                baseName + '.jpeg',
+                baseName + '.webp',
+                baseName + '.PNG',
+                baseName + '.JPG',
+                baseName + '.JPEG',
+                baseName + '.WEBP',
+                baseName.toUpperCase() + '.png',
+                baseName.toUpperCase() + '.jpg',
+                baseName.toUpperCase() + '.jpeg',
+                baseName.toUpperCase() + '.webp'
+            ];
+            
+            if (baseName === 'elmisria') candidates.push('300x300-5-3.png', '300x300-5-3.jpg');
+            if (baseName === 'minapharm') candidates.push('images (1).png', 'images (1).jpg', 'images%20(1).png');
+            if (baseName === 'rhodes') candidates.push('images.png', 'images.jpg');
+            if (baseName === 'intech') candidates.push('INTECH.webp', 'INTECH.png', 'intech.webp');
+            if (baseName === 'hassan-allam') candidates.push('Safaga-Terminal-Infrastructure-Project.jpg', 'Safaga-Terminal-Infrastructure-Project.png');
+            if (baseName === 'sunny') candidates.push('Screenshot_8-removebg-preview.png', 'Screenshot_8-removebg-preview.jpg');
+
+            var idx = parseInt(img.getAttribute('data-ext-idx') || '0');
+            idx++;
+            if (idx < candidates.length) {
+                img.setAttribute('data-ext-idx', idx);
+                img.src = candidates[idx];
+            } else {
+                img.onerror = null;
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #0A192F;
+            --accent-color: #FF6B00;
+            --accent-hover: #E05D00;
+            --bg-light: #F8FAFC;
+            --text-dark: #1E293B;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #030712;
+            color: #9CA3AF;
+            font-size: 0.875rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--primary-color) !important;
+            backdrop-filter: blur(10px);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .navbar-brand img {
+            height: 105px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #fff;
+            padding: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.97) 0%, rgba(15, 23, 42, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 90px 0 110px;
+            position: relative;
+        }
+        .hero-badge {
+            background: rgba(255, 107, 0, 0.15);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .btn-custom-primary {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+        }
+        .btn-custom-primary:hover {
+            background-color: var(--accent-hover);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(255, 107, 0, 0.4);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-bottom: 4px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        /* Product Cards & Enhanced Harmony Images */
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(10, 25, 47, 0.15);
+            border-color: var(--accent-color);
+        }
+        
+        /* إطار صور المنتجات المتناسق مع ألوان الموقع الكحلية والمعدنية */
+        .product-img-wrapper {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #0A192F 0%, #1E293B 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: all 0.5s ease;
+            filter: contrast(105%) brightness(96%);
+            mix-blend-mode: normal;
+        }
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.06);
+            filter: contrast(110%) brightness(105%);
+        }
+
+        /* Partner Logos Box */
+        .partner-box {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 110px;
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+        }
+        .partner-box img {
+            max-height: 75px;
+            max-width: 85%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.75;
+            transition: all 0.3s ease;
+        }
+        .partner-box:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* RFQ Section Style */
+        .rfq-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 2px solid #E2E8F0;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-weight: 800;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fa-solid fa-location-dot text-warning me-1"></i> العاشر من رمضان - الأردنية - جدة مول - خلف رنين
+                <span class="mx-3">|</span>
+                <i class="fa-solid fa-phone text-warning me-1"></i> <a href="tel:01014439177" class="text-white text-decoration-none fw-bold">01014439177</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-shield-halved text-warning me-1"></i> خامات استانلس ستيل معتمدة ومطابقة للمواصفات
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                <img src="logo.png" data-ext-idx="0" onerror="handleImgError(this, 'logo')" alt="U3 Logo">
+                <div>
+                    <span class="fw-bold fs-2 d-block text-white" style="line-height: 1.1;">U3 STAINLESS</span>
+                    <small class="text-warning fw-semibold fs-6">لتجارة الاستانلس ستيل</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-3 fw-semibold fs-5">
+                    <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">المنتجات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quote-form">طلب عرض سعر</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">شركاء النجاح</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location-map">موقعنا</a></li>
+                </ul>
+                <a href="#quote-form" class="btn btn-custom-primary ms-lg-3 mt-3 mt-lg-0 py-2 px-4" style="font-size: 1rem;">
+                    <i class="fa-solid fa-file-invoice me-1"></i> اطلب عرض سعر
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-badge mb-3">
+                        <i class="fa-solid fa-industry me-2"></i> شريكك الصناعي الأول في مصر والشرق الاوسط
+                    </div>
+                    <h1 class="display-3 fw-extrabold mb-4" style="line-height: 1.2; font-weight: 900;">
+                        حلول متكاملة لتوريدات <span style="color: var(--accent-color);">الاستانلس ستيل</span> للمصانع والشركات
+                    </h1>
+                    <p class="lead mb-5 text-light-50 fs-5 opacity-90" style="max-width: 700px;">
+                        نوفر لكم أجود خامات الاستانلس ستيل (304 / 316) من مواسير، ألواح، فلانشات، وصلات، ومسامير بأسعار تنافسية وتسليم فوري.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#quote-form" class="btn btn-custom-primary">طلب عرض سعر مباشر</a>
+                        <a href="tel:01014439177" class="btn btn-outline-light btn-lg px-4 fw-bold" style="border-radius: 8px;">
+                            <i class="fa-solid fa-phone me-2"></i> 01014439177
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="stats-section mb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="stat-card d-flex align-items-center gap-3">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="fa-solid fa-warehouse fa-2x" style="color: var(--accent-color);"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-0" style="color: var(--primary-color);">خامات متنوعة</h3>
+                            <p class="text-muted mb-0 font-sm">AISI 304, 304L, 316, 316L</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card d-flex align-items-center gap-3">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="fa-solid fa-truck-fast fa-2x" style="color: var(--accent-color);"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-0" style="color: var(--primary-color);">توصيل سريع</h3>
+                            <p class="text-muted mb-0 font-sm">تغطية شاملة للمناطق الصناعية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card d-flex align-items-center gap-3">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="fa-solid fa-certificate fa-2x" style="color: var(--accent-color);"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-0" style="color: var(--primary-color);">أعلى جودة</h3>
+                            <p class="text-muted mb-0 font-sm">مطابقة للقياسات والمواصفات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="section-title fs-1">منتجاتنا الرئيسية</h2>
+                <p class="text-muted fs-5">تشكيلة واسعة من خامات ومستلزمات الاستانلس ستيل عالية التحمل</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="img1.png" data-ext-idx="0" onerror="handleImgError(this, 'img1')" alt="مسامير وصواميل">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2" style="color: var(--primary-color);">مسامير وصواميل استانلس</h4>
+                            <p class="text-muted small mb-3">جميع المقاسات والأطوال بمختلف درجات الاستانلس المقاوم للصدأ والتآكل.</p>
+                            <a href="#quote-form" class="btn btn-outline-dark w-100 fw-bold rounded-3 py-2">اطلب تسعير المنتج</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="img2.png" data-ext-idx="0" onerror="handleImgError(this, 'img2')" alt="ألواح وخامات">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2" style="color: var(--primary-color);">ألواح وشرايح استانلس بشهادات منشأ</h4>
+                            <p class="text-muted small mb-3">ألواح معالجة بالكامل (304 / 316) بسماكات متنوعة للأغراض الصناعية والديكور.</p>
+                            <a href="#quote-form" class="btn btn-outline-dark w-100 fw-bold rounded-3 py-2">اطلب تسعير المنتج</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="img3.png" data-ext-idx="0" onerror="handleImgError(this, 'img3')" alt="كوليهات وسلاسل">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2" style="color: var(--primary-color);">كوليهات ضغط عالي وسلاسل استانلس</h4>
+                            <p class="text-muted small mb-3">كوليهات ضغط عالي متينة تضمن أعلى مستويات الأمان ومقاومة التسريب.</p>
+                            <a href="#quote-form" class="btn btn-outline-dark w-100 fw-bold rounded-3 py-2">اطلب تسعير المنتج</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper" style="height: 280px;">
+                            <img src="img4.png" data-ext-idx="0" onerror="handleImgError(this, 'img4')" alt="مواسير استانلس">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2" style="color: var(--primary-color);">مواسير استانلس ستيل (سيملس و لحام)</h4>
+                            <p class="text-muted small mb-3">مواسير خطوط الإنتاج والمصانع الغذائية والكيماوية بأقطار وسماكات مختلفة ومطابقة للمواصفات.</p>
+                            <a href="#quote-form" class="btn btn-outline-dark w-100 fw-bold rounded-3 py-2">اطلب تسعير المنتج</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper" style="height: 280px;">
+                            <img src="img5.png" data-ext-idx="0" onerror="handleImgError(this, 'img5')" alt="محابس">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2" style="color: var(--primary-color);">محابس ومستلزمات استانلس</h4>
+                            <p class="text-muted small mb-3">محابس كروية وسكينة وفراشة للتحكم الكامل في التدفق داخل الخطوط الصناعية.</p>
+                            <a href="#quote-form" class="btn btn-outline-dark w-100 fw-bold rounded-3 py-2">اطلب تسعير المنتج</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RFQ Quote Request Section -->
+    <section id="quote-form" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="rfq-card p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2 fs-6">خدمة المبيعات المباشرة</span>
+                            <h2 class="fw-extrabold text-primary display-6 mb-2">طلب عرض سعر (Quotation Request)</h2>
+                            <p class="text-muted">قم بتعبئة بياناتك وإرفاق قائمة البنود المطلوبة (PDF, Excel, أو صورة) وسيتم تحويل طلبك مباشرة للواتساب</p>
+                        </div>
+
+                        <form id="whatsappQuoteForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">اسم الشركة / العميل <span class="text-danger">*</span></label>
+                                    <input type="text" id="clientName" class="form-control form-control-lg bg-light" placeholder="أدخل اسمك أو اسم مصنعك" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">رقم الهاتف / الواتساب <span class="text-danger">*</span></label>
+                                    <input type="tel" id="clientPhone" class="form-control form-control-lg bg-light" placeholder="01xxxxxxxxx" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">تفاصيل البنود والكميات المطلوبة</label>
+                                    <textarea id="quoteDetails" class="form-control form-control-lg bg-light" rows="4" placeholder="مثال: مطلوب عدد 50 ماسورة 2 بوصة استانلس 304، وعدد 100 مسمار M12..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">إرفاق ملف البنود (PDF / Excel / صورة)</label>
+                                    <div class="input-group input-group-lg">
+                                        <input type="file" id="quoteFile" class="form-control" accept=".pdf,.png,.jpg,.jpeg,.xlsx,.xls,.doc,.docx">
+                                        <label class="input-group-text bg-secondary text-white" for="quoteFile"><i class="fa-solid fa-paperclip me-1"></i> اختر ملف</label>
+                                    </div>
+                                    <small class="text-muted mt-1 d-block"><i class="fa-solid fa-circle-info me-1"></i> عند الضغط على إرسال، سيتم فتح محادثة الواتساب ومشاركتك لإرفاق الملف بها مباشرة.</small>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-custom-primary btn-lg w-100 py-3 fs-5 shadow">
+                                        <i class="fa-brands fa-whatsapp me-2 fs-4"></i> إرسال طلب التسعير عبر الواتساب
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-5" style="background-color: var(--bg-light);">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="section-title fs-1">شركاء النجاح</h2>
+                <p class="text-muted fs-5">نفخر بتوريد خامات ومستلزمات الاستانلس ستيل لكبرى الشركات والمصانع الرائدة</p>
+            </div>
+            <div class="row g-4 justify-content-center align-items-center">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="arma.png" data-ext-idx="0" onerror="handleImgError(this, 'arma')" alt="Arma">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="indomie.png" data-ext-idx="0" onerror="handleImgError(this, 'indomie')" alt="Indomie">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="nova.png" data-ext-idx="0" onerror="handleImgError(this, 'nova')" alt="Nova Industries">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="hassan-allam.png" data-ext-idx="0" onerror="handleImgError(this, 'hassan-allam')" alt="Hassan Allam Construction">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="minapharm.png" data-ext-idx="0" onerror="handleImgError(this, 'minapharm')" alt="Minapharm Pharmaceuticals">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="sunny.png" data-ext-idx="0" onerror="handleImgError(this, 'sunny')" alt="Sunny Pharmaceutical">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="rhodes.png" data-ext-idx="0" onerror="handleImgError(this, 'rhodes')" alt="Rhodes Dairy Experts">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="intech.png" data-ext-idx="0" onerror="handleImgError(this, 'intech')" alt="INTECH Environmental Technologies">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="partner-box">
+                        <img src="elmisria.png" data-ext-idx="0" onerror="handleImgError(this, 'elmisria')" alt="El Misria For Food Investment">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Location Section -->
+    <section id="location-map" class="py-5 bg-white border-top">
+        <div class="container py-2">
+            <div class="text-center mb-4">
+                <h2 class="section-title fs-1">موقعنا على الخريطة</h2>
+                <p class="text-muted fs-5">العاشر من رمضان - الأردنية - جدة مول - خلف رنين</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="rounded-4 overflow-hidden shadow-lg border">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=العاشر+من+رمضان+جدة+مول&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="420" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="https://maps.app.goo.gl/Wk9vH9Xr1buezmYi9" target="_blank" class="btn btn-outline-primary btn-lg rounded-pill px-5 fw-bold shadow-sm">
+                            <i class="fa-solid fa-map-location-dot me-2"></i> افتح اللوكيشن المباشر على تطبيق Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="text-white py-5" style="background-color: var(--primary-color);">
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <img src="logo.png" data-ext-idx="0" onerror="handleImgError(this, 'logo')" alt="U3 Logo" style="height: 110px; background: white; padding: 8px; border-radius: 12px;">
+                        <div>
+                            <h3 class="fw-bold mb-0 text-white">U3 STAINLESS</h3>
+                            <p class="text-warning mb-0 fw-semibold fs-5">لتجارة وتوريد الاستانلس ستيل</p>
+                        </div>
+                    </div>
+                    <p class="text-light-50 mb-4" style="line-height: 1.8;">
+                        نحن شركة متخصصة في تجارة وتوريد كافة مستلزمات الاستانلس ستيل في مدينة العاشر من رمضان وكافة المناطق الصناعية بمصر.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-4 text-warning">روابط سريعة</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2 text-light-50 fs-5">
+                        <li><a href="#" class="text-white-50 text-decoration-none">الرئيسية</a></li>
+                        <li><a href="#products" class="text-white-50 text-decoration-none">المنتجات</a></li>
+                        <li><a href="#quote-form" class="text-white-50 text-decoration-none">طلب عرض سعر</a></li>
+                        <li><a href="#partners" class="text-white-50 text-decoration-none">شركاء النجاح</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="fw-bold mb-4 text-warning">معلومات التواصل المباشر</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-location-dot fs-4 text-warning"></i>
+                            <a href="https://maps.app.goo.gl/Wk9vH9Xr1buezmYi9" target="_blank" class="text-white text-decoration-none fs-5">العاشر من رمضان - الأردنية - جدة مول - خلف رنين</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-phone-volume fs-4 text-warning"></i>
+                            <div>
+                                <span class="d-block text-white-50 small">رقم الهاتف / المبيعات:</span>
+                                <a href="tel:01014439177" class="text-white fs-4 fw-bold text-decoration-none">01014439177</a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="fa-brands fa-whatsapp fs-3 text-success"></i>
+                            <div>
+                                <span class="d-block text-white-50 small">الواتساب المباشر:</span>
+                                <a href="https://wa.me/201014439177" target="_blank" class="text-white fs-5 fw-bold text-decoration-none">01014439177</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2026 جميع الحقوق محفوظة لشركة U3 لتجارة الاستانلس ستيل.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201014439177" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('whatsappQuoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('clientName').value.trim();
+            const phone = document.getElementById('clientPhone').value.trim();
+            const details = document.getElementById('quoteDetails').value.trim();
+            const fileInput = document.getElementById('quoteFile');
+            const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'لا يوجد ملف مرفق';
+
+            let msg = `*طلب عرض سعر جديد من الموقع (U3 Stainless)*\n\n`;
+            msg += `👤 *الاسم/الشركة:* ${name}\n`;
+            msg += `📞 *رقم التواصل:* ${phone}\n`;
+            if (details) msg += `📝 *تفاصيل البنود:* ${details}\n`;
+            msg += `📎 *اسم الملف المطلوب إرفاقه:* ${fileName}\n\n`;
+            if (fileInput.files.length > 0) {
+                msg += `*(برجاء إرفاق الملف المسمى "${fileName}" في هذه المحادثة الآن)*`;
+            }
+
+            const encodedMsg = encodeURIComponent(msg);
+            const whatsappUrl = `https://wa.me/201014439177?text=${encodedMsg}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
